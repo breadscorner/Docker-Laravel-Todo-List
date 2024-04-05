@@ -1,0 +1,16 @@
+services:
+  web:
+    build: ./server
+    ports:
+      - "4515:80"
+    volumes:
+      - ./server/src:/var/www/html  
+  db:
+    build: ./database
+    ports:
+      - "33006:3306"
+    volumes:
+      - ./database/init:/docker-entrypoint-initdb.d
+      - data:/var/lib/mysql
+volumes:
+  data:      

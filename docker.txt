@@ -1,0 +1,9 @@
+Docker image:
+  operating system template that you can create containers from (VM)
+  a container is an instance of an image 
+  starts with a base image(Ubuntu) and we add some customizations (install packages, tools)
+
+  php:8.2-apache is the base image for lab 8 which contains php and apache pre-install.
+
+  Dockerfile - building the image
+  docker-compose.yml - orchestrating multiple containers
